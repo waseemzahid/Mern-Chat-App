@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "node backend/server.js",
