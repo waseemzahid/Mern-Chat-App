@@ -3,6 +3,7 @@ import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeleton from "../Skeleton/MessageSkeleton";
 import Message from "./Message";
 import useListenMessages from "../../hooks/useListenMessages";
+import { CiLock } from "react-icons/ci";
 
 const Messages = () => {
 	const { messages, loading } = useGetMessages();
@@ -25,11 +26,9 @@ const Messages = () => {
 
 		{loading && [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
 		{!loading && messages.length === 0 && (
-			<div className="flex items-center justify-center h-screen">
-			<div className="text-center">
-				<p className="text-gray-700 bg-[#ffe4c4]">Send a message to start the conversation</p>
-			</div>
-		</div>
+			<p className="text-gray-800 bg-[#ffe4c4] border border-[#ffe4c4] rounded-md flex mx-10 my-4 p-1 items-center justify-center text-[16px]">
+				<span><CiLock className="mt-1 mr-1" /></span> Send a message to start the conversation
+			</p>
 			// <p className='text-center'>Send a message to start the conversation</p>
 		)}
 		</div>
