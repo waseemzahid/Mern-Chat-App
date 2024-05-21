@@ -47,7 +47,7 @@ const NoChatSelected = () => {
       <div className="px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2">
         <p>
           Welcome 👋{' '}
-          <span className="text-orange-700 capitalize">
+          <span className="text-orange-600 capitalize">
             {authUser.fullName}
           </span>{' '}
           {getRandomEmoji()}
